@@ -1,0 +1,42 @@
+[
+	{
+		"code":"B1586",
+		"name":"Nguyễn Văn Anh",
+		"email":"vananh@gmail.com",
+		"mark_html": 18,
+		"mark_ajs": 20,
+		"mark_dwhcj":19
+	},
+	{
+		"code":"B5864",
+		"name":"Nguyễn Tiến Thành",
+		"email":"vanthanh@gmail.com",
+		"mark_html": 16,
+		"mark_ajs": 22,
+		"mark_dwhcj":20
+	},
+	{
+		"code":"B3568",
+		"name":"Nguyễn Việt Tiến",
+		"email":"tienvt@gmail.com",
+		"mark_html": 18,
+		"mark_ajs": 16,
+		"mark_dwhcj":23
+	},
+	{
+		"code":"B8754",
+		"name":"Đỗ Thẩm Mỹ",
+		"email":"mydt@gmail.com",
+		"mark_html": 20,
+		"mark_ajs": 18,
+		"mark_dwhcj":17
+	},
+	{
+		"code":"B1864",
+		"name":"Hoàng Phi Hồng",
+		"email":"honghp@gmail.com",
+		"mark_html": 16,
+		"mark_ajs": 15,
+		"mark_dwhcj":22
+	}
+]

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <meta charset="utf-8">
+    <title>Angularjs</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</head>
+
+<body ng-controller="mainCtrl">
+    <!-- include file menu nav.html -->
+    <div ng-include="'page/nav.html'"></div>
+    <div class="container">
+        <div class="col-md-9">
+            <div ng-view></div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Tra cứu điểm thi</h3>
+                </div>
+                <div class="panel-body">
+                    <form action="#" method="GET" role="form">
+
+                        <div class="form-group">
+                            <label for="">Nhập mã sinh viên</label>
+                            <input type="text" class="form-control" ng-model="code" placeholder="B5864...">
+                        </div>
+                        <button type="button" class="btn btn-primary" ng-click="check_mark()">Tra cứu</button>
+                        <button type="reset" class="btn btn-danger">Reset</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="panel panel-default" ng-show="student_mark.code">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Thông tin điểm</h3>
+                </div>
+                <div class="panel-body">
+                    <p><b>Sinh viên:</b> {{student_mark.name}}</p>
+                    <p><b>Điểm html:</b> {{student_mark.mark_html}}</p>
+                    <p><b>Điểm AngularJS:</b> {{student_mark.mark_ajs}}</p>
+                    <p><b>Điểm bài tập lớn WHCJ:</b> {{student_mark.mark_dwhcj}}</p>
+                    <p><b>Trung bình các môn: {{avg_m}}</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal-view-student by id -->
+    <div class="modal fade" id="modal-show">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">{{dt.name}}</h4>
+                </div>
+                <div class="modal-body">
+                    <p><b>Code:</b> {{dt.code}}</p>
+                    <p><b>Họ tên:</b> {{dt.name}}</p>
+                    <p><b>Email:</b> {{dt.email}}</p>
+                    <p><b>Điểm html:</b> {{dt.mark_html}}</p>
+                    <p><b>Điểm angularJS:</b> {{dt.mark_ajs}}</p>
+                    <p><b>Điểm WHCJ:</b> {{dt.mark_dwhcj}}</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
